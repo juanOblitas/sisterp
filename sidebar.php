@@ -11,8 +11,24 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-<div class="col-lg-4 col-md-4 col-sm-4 col-sm-768">
-	<div id="secondary" class="widget-area widget-default" role="complementary">
+<?php
+	if(is_home()){
+?>
+<div class="col-lg-12 col-md-12 col-sm-12 col-sm-768 row">
+
+	<div class="col-lg-3 col-md-3 col-sm-3 widget-area widget-default" role="complementary">
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 widget-area widget-default" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 widget-area widget-default" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-3' ); ?>
+	</div>
+	<div class="col-lg-3 col-md-3 col-sm-3 widget-area widget-default" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-4' ); ?>
+	</div>
 </div>
+<?php
+}
+?>

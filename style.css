@@ -4454,6 +4454,7 @@ a:hover {
   .header ul.dropdown-menu {
     top: 28px !important;
   }
+  
 }
 
 @media (min-width: 1200px) {
@@ -4477,9 +4478,31 @@ a:hover {
     background-color: #353C4E !important;
 }
 
+.inline-menu{
+  display: inline;
+}
+
+@media (min-width: 576px){
+  .col-sm-9 {
+      flex: initial;
+      max-width: 100%;
+  }
+}
+
+/*Buscar estas clases: nav navbar-nav navbar-right primary-menu*/
+
+
+
 /* Fin Menu */
 
 h2.entry-title{
   padding: 20px 0 !important;
 }
+
+.limpieza{
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: red;
+}
+
 

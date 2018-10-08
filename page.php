@@ -8,7 +8,8 @@
  */
 
 get_header(); 
-$colmain = (is_active_sidebar( 'sidebar-1' )) ? 'col-md-8 col-lg-8' : 'col-md-12 col-lg-12';
+/*$colmain = (is_active_sidebar( 'sidebar-1' )) ? 'col-md-8 col-lg-8' : 'col-md-12 col-lg-12';*/
+$colmain = (is_active_sidebar( 'sidebar-1' )) ? 'col-md-12 col-lg-12' : 'col-md-12 col-lg-12';
 ?>
     
     <div id="content" class="site-content">

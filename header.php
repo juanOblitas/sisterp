@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -72,7 +74,7 @@
                                      'container'       	=> 'ul',
                                      'echo'            	=> true,
                                      'fallback_cb'     	=> 'WP_Bootstrap_Navwalker::fallback',
-                                     'menu_class'		=> 'nav navbar-nav navbar-right primary-menu',
+                                     'menu_class'		=> 'nav navbar-nav navbar-right primary-menu inline-menu',
                                      'item_wrap'			=> '<ul class="%2$s">%3$s</ul>',
                                      'walker'         => new wp_bootstrap_navwalker(),
                                  );

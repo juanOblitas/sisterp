@@ -136,10 +136,19 @@ add_action( 'after_setup_theme', 'corporate_landing_page_content_width', 0 );
 function corporate_landing_page_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'corporate-landing-page' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'corporate-landing-page' ),
 		'before_widget' => '<aside id= "%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2><div class ="custom-border"></div>',
+	) );
+	register_sidebars(4,array(
+		'name'          => esc_html__( 'Sidebar %d', 'corporate-landing-page' ),
+		'id'            => 'sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'corporate-landing-page' ),
+		'before_widget' => '<div id= "%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2><div class ="custom-border"></div>',
 	) );
@@ -305,4 +314,39 @@ require_once get_template_directory() . '/inc/tgm/plugins_recommended.php';
  * woo functions
  */
 require_once get_template_directory() . '/inc/woo-functions.php';
+
+/* jc carrusel */
+
+add_theme_support( 'post-thumbnails' );
+
+add_image_size( 'jc-featured-image', 852, 480, true );
+
+/*
+ * Define custom post type
+ * Register post types: https://codex.wordpress.org/Function_Reference/register_post_type
+ * Icons: https://developer.wordpress.org/resource/dashicons/
+ */
+ function jc_post_type() {
+ 	register_post_type( 'jc_slider',
+ 		array(
+	      'labels' => array(
+	        'name' => __( 'Carousel' ),
+	        'singular_name' => __( 'Item' ),
+	        'add_new' => __( 'Nuevo item' ),
+	        'add_new_item' => __( 'Añadir nuevo item' ),
+	        'edit_item' => __( 'Editar item' ),
+	        'featured_image' => __( 'Imagen del slide' )
+	      ),
+	      'public' => true,
+	      'exclude_from_search' => true,
+	      'has_archive' => false,
+	      'show_in_nav_menus' => false,
+	      'menu_icon' => 'dashicons-slides',
+	      //'rewrite' => array('slug' => 'carousel'),
+	      'supports' => array('title', 'editor', 'thumbnail')
+
+    	)
+  	);
+ }
+ add_action( 'init', 'jc_post_type' );
 
