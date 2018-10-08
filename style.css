@@ -4422,7 +4422,7 @@ a:hover {
 
 /* Juan Carlos */
 
-/* Menu */
+/* Menu con la version bootstrapp 3.7*/
 
 /* Arreglar width 768-1199 */
 
@@ -4493,7 +4493,35 @@ a:hover {
 
 
 
-/* Fin Menu */
+/* Fin Menu con la version bootstrapp 3.7*/
+
+/* Menu con la version bootstrapp 4.1*/
+
+@media (min-width: 768px) and (max-width: 991px){
+  .jc-menu {
+    justify-content: space-around;
+    width: 100%;
+  }
+  .jc-nav{
+    width:100%;
+  }
+}
+
+@media (min-width: 991px){
+  .jc-menu {
+    justify-content: space-around;
+    width: 100%;
+  }
+  .jc-nav{
+    width:70%;
+  }
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+/* Fin Menu con la version bootstrapp 4.1*/
 
 h2.entry-title{
   padding: 20px 0 !important;

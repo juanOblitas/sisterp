@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,27 +46,24 @@
             <div class="header-bottom">
                 <div class="container">
                     <div class="row border-box">
-                        <div class="col-lg-3 col-sm-3 logo">
+                        
                             <div class="site-branding">
                                 <?php
                                 the_custom_logo();
                                 ?>
                                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>                               
                             </div>
-                        </div>
-                        <div class="col-lg-9 col-sm-9 menu">
-                            <nav id="site-navigation" class="navbar navbar-default main-navigation">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                        <span class="sr-only"><?php echo esc_html('Toggle navigation', 'corporate-landing-page') ?></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
+                        
+                        
+                            <nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light jc-nav">
+
+                                <!-- <div class="navbar-header"> -->
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"><?php echo esc_html('', 'corporate-landing-page') ?></span>
+                                    </button>                                    
+                                <!-- </div> -->
                                 <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse menu-center" id="bs-example-navbar-collapse-1">
+                                <div class="collapse navbar-collapse menu-center" id="navbarSupportedContent">
                                    <?php
                                    $defaults = array(
                                      'theme_location' 	=> 'menu-1',
@@ -74,7 +71,7 @@
                                      'container'       	=> 'ul',
                                      'echo'            	=> true,
                                      'fallback_cb'     	=> 'WP_Bootstrap_Navwalker::fallback',
-                                     'menu_class'		=> 'nav navbar-nav navbar-right primary-menu inline-menu',
+                                     'menu_class'		=> 'navbar-nav mr-auto jc-menu',
                                      'item_wrap'			=> '<ul class="%2$s">%3$s</ul>',
                                      'walker'         => new wp_bootstrap_navwalker(),
                                  );
@@ -83,7 +80,7 @@
                                </div>
                                <!-- /.navbar-collapse -->
                            </nav>
-                       </div>
+                       
                    </div>
                </div>
            </div>
