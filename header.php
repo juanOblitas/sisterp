@@ -45,7 +45,7 @@
             </div>
             <div class="header-bottom">
                 <div class="container">
-                    <div class="row border-box">
+                    <div class="row border-box jc-icon-menu">
                         
                             <div class="site-branding">
                                 <?php
@@ -55,11 +55,12 @@
                             </div>
                         
                         
-                            <nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light jc-nav">
+                            <nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light jc-nav width-nav">
 
                                 <!-- <div class="navbar-header"> -->
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button class="navbar-toggler jc-button-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"><?php echo esc_html('', 'corporate-landing-page') ?></span>
+
                                     </button>                                    
                                 <!-- </div> -->
                                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +72,7 @@
                                      'container'       	=> 'ul',
                                      'echo'            	=> true,
                                      'fallback_cb'     	=> 'WP_Bootstrap_Navwalker::fallback',
-                                     'menu_class'		=> 'navbar-nav mr-auto jc-menu',
+                                     'menu_class'		=> 'navbar-nav mr-auto jc-menu ul-menu',
                                      'item_wrap'			=> '<ul class="%2$s">%3$s</ul>',
                                      'walker'         => new wp_bootstrap_navwalker(),
                                  );
